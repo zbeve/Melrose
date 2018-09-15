@@ -11,5 +11,15 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/scripts.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+ var node = 'node_modules/';
+
+ /***** MIX ALL PLUGINS SCRIPTS *****/
+mix.babel([
+    node+'jquery/dist/jquery.min.js',
+    node+'bootstrap/dist/js/bootstrap.min.js',
+    node+'isotope-layout/dist/isotope.pkgd.min.js',
+    node+'imagesloaded/imagesloaded.pkgd.min.js'
+ ], 'public/js/plugins.min.js');
+
+mix.js('resources/assets/js/scripts.js', 'public/js/scripts.min.js')
+    .sass('resources/assets/sass/app.scss', 'public/css/app.min.css');

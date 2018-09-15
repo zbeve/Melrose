@@ -1,9 +1,12 @@
+// Fonts
+$font: Special Elite, cursive;
+$roboto: Roboto, sans-serif;
+
 body {
   background-color: black;
 }
-
 #title {
-  font-family: Special Elite, cursive;
+  font-family: $font;
   color: white;
 }
 
@@ -14,58 +17,49 @@ body {
   -webkit-transition: all .5s ease-in-out;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-  -webkit-transform: scale(1);
-  transform: scale(1);
+  -webkit-transform: scale(1.0);
+  transform: scale(1.0);
+  .grid-item {
+    width: 25%;
+  }
 }
-
-.lightbox-link .grid-item {
-  width: 25%;
-}
-
 .lightbox-link:hover {
   -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-  -webkit-transform: scale(2);
-  transform: scale(2);
+ filter: grayscale(0%);
+ -webkit-transform: scale(2);
+ transform: scale(2);
 }
 
 .row {
   padding-bottom: 5%;
 }
-
 .navbar {
   position: fixed;
   right: 0;
   left: 0;
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.8) !important;
-  font-family: Special Elite, cursive;
-}
-
-.navbar .navbar-nav {
-  width: 100%;
-  text-align: center;
-}
-
-.navbar .navbar-nav li {
-  margin: auto;
-}
-
-.navbar .navbar-nav li a {
-  font-size: 2em;
-}
-
-.navbar .navbar-nav li .navbar-brand {
-  font-size: 3em;
-  margin: 0 !important;
+  font-family: $font;
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    li {
+      margin: auto;
+      a {
+        font-size: 2em;
+      }
+      .navbar-brand {
+        font-size: 3em;
+        margin: 0 !important;
+      }
+    }
+  }
 }
 
 .download {
   text-decoration: none !important;
   color: white !important;
+  .btn {
+    border-radius: 0;
+  }
 }
-
-.download .btn {
-  border-radius: 0;
-}
-

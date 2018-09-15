@@ -21,9 +21,7 @@
   <div class="col-8">
     <div id="grid" class="grid">
       @foreach ($data as $image)
-        <a class="lightbox-link" href="/assets/images/{{ $image->filename }}" data-lightbox="gallery" data-title="My caption">
         <img class="grid-item" src="/assets/images/{{ $image->filename }}">
-        </a>
       @endforeach
     </div>
   </div>
