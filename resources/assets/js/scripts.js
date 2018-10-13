@@ -1,11 +1,14 @@
 $(document).ready(function(){
 
-  $('body').imagesLoaded( function() {
-    $('.grid').isotope({
+  console.log('faggots');
+
+  // $('body').imagesLoaded( function() {
+    $('#grid').isotope({
       itemSelector:'.grid-item',
-      // layoutMode: 'fitRows',
       sortBy: 'random'
     });
-  });
+  // )};
+
+  console.log('done');
 
 });

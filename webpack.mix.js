@@ -17,7 +17,6 @@ let mix = require('laravel-mix');
 mix.babel([
     node+'jquery/dist/jquery.min.js',
     node+'bootstrap/dist/js/bootstrap.min.js',
-    node+'isotope-layout/dist/isotope.pkgd.min.js',
     node+'imagesloaded/imagesloaded.pkgd.min.js'
  ], 'public/js/plugins.min.js');
 
